@@ -1,5 +1,7 @@
 ---
 ---
 <p>index</p>
-
-{% include_relative README.md | markdownify %}
+{% capture article %}
+{% include_relative README.md %}
+{% endcapture %}
+{{ article | markdownify }}
