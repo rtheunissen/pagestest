@@ -2,6 +2,13 @@
 ---
 <p>index</p>
 {% capture article %}
-{% include_relative README.md %}
+  {% include_relative README.md %}
 {% endcapture %}
+
 {{ article | markdownify }}
+
+{% capture jsondata %}
+  {% include_relative test.json %}
+{% endcapture %}
+
+{{ jsondata | inspect }}
